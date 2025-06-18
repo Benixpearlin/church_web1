@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  
+}
+h1{
+  font-size: 64px;
+}
+h2{
+  font-size: 48px;
+}
+h3{
+  font-size: 40px;
+}
+h4{
+  font-size: 32px;
+}
+h5{
+  font-size: 24px;
+}
+h6{
+  font-size: 16px;
+}
+
+button{
+  width:205px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #FFD2A4;
+  color:#161722;
+  font-size: 18px;
+  line-height: 16px;
+  border: none;
+}
+
+button:hover{
+  width:205px;
+  height: 60px;
+  border-radius: 12px;
+  color: #FFD2A4;
+  background-color:#161722;
+  font-size: 18px;
+  line-height: 16px;
+  border: none;
+}
