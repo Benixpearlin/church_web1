@@ -25,8 +25,8 @@ h6 {
 p {
   font-size: 20px;
 }
-body{
-  width:100%;
+body {
+  width: 100%;
 }
 
 button {
@@ -47,12 +47,12 @@ button:hover {
   background-color: #161722;
 }
 
-
+// Nav bar
 
 .navbarContainer {
   display: flex;
   justify-content: space-between;
-  padding:0px;
+  padding: 0px;
   align-items: center;
   background-color: #161722;
   height: 80px;
@@ -81,12 +81,11 @@ button:hover {
     }
   }
 
-  .navbarlast{
+  .navbarlast {
     margin-right: 15px;
   }
 
-
-   .burger {
+  .burger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -94,7 +93,7 @@ button:hover {
     height: 20px;
     cursor: pointer;
     z-index: 11;
-    margin-right:15px;
+    margin-right: 15px;
 
     span {
       background-color: #fff;
@@ -117,10 +116,9 @@ button:hover {
     }
   }
 
-
   // Mobile styles
   @media (max-width: 768px) {
-    .navbarContainer{
+    .navbarContainer {
       display: flex;
       align-items: center;
       justify-content: space-between !important;
@@ -152,3 +150,128 @@ button:hover {
   }
 }
 
+// body Content 
+
+.bodyContent {
+  height: 740px;
+}
+
+// footer 
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #0d0d16;
+  color: white;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+
+  .footerLeft {
+    flex: 1;
+    // min-width: 200px;
+
+    .logo {
+      color: #ffd2a4;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  }
+
+  .footerCenter {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    min-width: 250px;
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    div {
+      padding: 0;
+
+      p {
+        margin-bottom: 8px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+          color: #ffd2a4;
+        }
+      }
+    }
+
+    .socials span {
+      font-size: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffd2a4;
+      }
+    }
+  }
+
+  .footerRight {
+    flex: 1.2;
+    min-width: 300px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .subscribeBox {
+      display: flex;
+      max-width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+
+      input {
+        flex: 1;
+        padding: 14px 16px;
+        border: none;
+        background: transparent;
+        color: rgb(0, 0, 0);
+        outline: none;
+
+        &::placeholder {
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+
+    .footerCenter {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .footerRight {
+      .subscribeBox {
+        flex-direction: column;
+
+        input {
+          width: 100%;
+          padding: 12px;
+        }
+
+        button {
+          width: 100%;
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
