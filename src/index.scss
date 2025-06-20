@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 16px;
+}
+p {
+  font-size: 20px;
+}
+body{
+  width:100%;
+}
+
+button {
+  width: 205px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #ffd2a4;
+  color: #161722;
+  font-size: 18px;
+  line-height: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; // ← Smooth transition
+}
+
+button:hover {
+  color: #ffd2a4;
+  background-color: #161722;
+}
+
+
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  padding:0px;
+  align-items: center;
+  background-color: #161722;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+  width: 100%;
+
+  .navbarlogo {
+    cursor: pointer;
+    margin-left: 15px;
+  }
+
+  .navbarmiddle {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    > p:hover {
+      color: #ffd2a4;
+    }
+  }
+
+  .navbarlast{
+    margin-right: 15px;
+  }
+
+
+   .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 11;
+    margin-right:15px;
+
+    span {
+      background-color: #fff;
+      height: 3px;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(12px);
+    }
+
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-12px);
+    }
+  }
+
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    .navbarContainer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between !important;
+    }
+    .navbarmiddle {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background-color: #161722;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      display: none;
+    }
+
+    .navbarmiddle.open {
+      display: flex;
+    }
+
+    .navbarlast {
+      display: none;
+    }
+
+    .burger {
+      display: flex;
+    }
+  }
+}
+
